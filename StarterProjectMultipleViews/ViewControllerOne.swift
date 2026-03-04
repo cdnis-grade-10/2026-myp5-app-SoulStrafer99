@@ -32,6 +32,7 @@ class ViewControllerOne: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var startStopButton: UIButton!
     
@@ -61,6 +62,7 @@ class ViewControllerOne: UIViewController {
             self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
             self.startStopButton.setTitle("START", for: .normal)
             self.startStopButton.setTitleColor(UIColor.green, for: .normal)
+            self.currentTimeLabel.text = "Current Timer: N/A"
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -79,7 +81,6 @@ class ViewControllerOne: UIViewController {
             startStopButton.setTitleColor(UIColor.red, for: .normal)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             
-            
         }
     }
     
@@ -88,7 +89,13 @@ class ViewControllerOne: UIViewController {
         let time = secondsToHoursMinutesSeconds(seconds: count)
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         timerLabel.text = timeString
-        
+        currentTimeLabel.text =  "Current Time: \(getCurrentTime())"
+    }
+    
+    func getCurrentTime() -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: Date())
     }
     
     func secondsToHoursMinutesSeconds (seconds: Int) -> (Int, Int, Int) {
