@@ -9,21 +9,46 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+            emailTextField.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+            
+            let emailPlaceholderAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 20, weight: .black),
+                .foregroundColor: UIColor.lightGray
+            ]
+            
+            emailTextField.attributedPlaceholder = NSAttributedString(
+                string: "Email",
+                attributes: emailPlaceholderAttributes
+            )
+        
+            passwordTextField.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+            
+            // 2. Set a custom style for the placeholder specifically
+            // This keeps the placeholder Regular weight even though the input is Bold
+            let passwordPlaceholderAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 20, weight: .bold),
+                .foregroundColor: UIColor.lightGray
+            ]
+            
+            passwordTextField.attributedPlaceholder = NSAttributedString(
+                string: "Password",
+                attributes: passwordPlaceholderAttributes
+            )
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // This tells the view to stop editing, which hides the keyboard
+        self.view.endEditing(true)
     }
-    */
 
+    @IBAction func loginClicked(_ sender: Any) {
+    }
+    @IBAction func signUpClicked(_ sender: Any) {
+    }
+    @IBAction func forgotPasswordClicked(_ sender: Any) {
+    }
 }
