@@ -32,6 +32,9 @@ class ViewControllerOne: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
     
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var tTaskNameTextField: UITextField!
+    @IBOutlet weak var tEarningsTextField: UITextField!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var startStopButton: UIButton!
@@ -49,6 +52,12 @@ class ViewControllerOne: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startStopButton.setTitleColor(UIColor.green, for: .normal)
+        self.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(systemName: "stopwatch"), tag: 0)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // This tells the view to stop editing, which hides the keyboard
+        self.view.endEditing(true)
     }
 
     @IBAction func resetTapped(_ sender: Any) {

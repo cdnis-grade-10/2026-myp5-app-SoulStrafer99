@@ -1,8 +1,8 @@
 /*
  
- ViewControllerTwo.swift
+ ViewControllerThree.swift
  
- This file will contain the code for the second viewcontroller.
+ This file will contain the code for the third viewcontroller.
  Please ensure that your code is organised and is easy to read.
  This means that you will need to both structure your code correctly,
  in addition to using the correct syntax for Swift.
@@ -27,7 +27,7 @@
 
 import UIKit
 
-class ViewControllerTwo: UIViewController {
+class ViewControllerThree: UIViewController {
     
     // MARK: - IBOutlets
     
@@ -41,8 +41,7 @@ class ViewControllerTwo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarItem = UITabBarItem(title: "History", image: UIImage(systemName: "goforward"), tag: 0)
         // Do any additional setup after loading the view.
     }
-
-
 }

@@ -9,25 +9,31 @@
 /* Begin PBXBuildFile section */
 		120E289727DAFAF4000129B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E289627DAFAF4000129B5 /* AppDelegate.swift */; };
 		120E289927DAFAF4000129B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E289827DAFAF4000129B5 /* SceneDelegate.swift */; };
-		120E289B27DAFAF4000129B5 /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E289A27DAFAF4000129B5 /* ViewControllerOne.swift */; };
+		120E289B27DAFAF4000129B5 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E289A27DAFAF4000129B5 /* TimerViewController.swift */; };
 		120E289E27DAFAF4000129B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E289C27DAFAF4000129B5 /* Main.storyboard */; };
 		120E28A027DAFAF6000129B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120E289F27DAFAF6000129B5 /* Assets.xcassets */; };
 		120E28A327DAFAF6000129B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120E28A127DAFAF6000129B5 /* LaunchScreen.storyboard */; };
-		120E28AB27DAFE95000129B5 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */; };
-		121E32872817B5A200DC59D4 /* ViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E32862817B5A200DC59D4 /* ViewControllerThree.swift */; };
+		120E28AB27DAFE95000129B5 /* ManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E28AA27DAFE95000129B5 /* ManualViewController.swift */; };
+		121E32872817B5A200DC59D4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121E32862817B5A200DC59D4 /* HistoryViewController.swift */; };
+		36F326612F586D91004B8ED6 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326602F586D91004B8ED6 /* SummaryViewController.swift */; };
+		36F326632F586E79004B8ED6 /* VisualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326622F586E79004B8ED6 /* VisualViewController.swift */; };
+		36F326672F586EF8004B8ED6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326662F586EF8004B8ED6 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		120E289327DAFAF4000129B5 /* StarterProjectMultipleViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterProjectMultipleViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		120E289627DAFAF4000129B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		120E289827DAFAF4000129B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		120E289A27DAFAF4000129B5 /* ViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOne.swift; sourceTree = "<group>"; };
+		120E289A27DAFAF4000129B5 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		120E289D27DAFAF4000129B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		120E289F27DAFAF6000129B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		120E28A227DAFAF6000129B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		120E28A427DAFAF6000129B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
-		121E32862817B5A200DC59D4 /* ViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerThree.swift; sourceTree = "<group>"; };
+		120E28AA27DAFE95000129B5 /* ManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualViewController.swift; sourceTree = "<group>"; };
+		121E32862817B5A200DC59D4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		36F326602F586D91004B8ED6 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		36F326622F586E79004B8ED6 /* VisualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualViewController.swift; sourceTree = "<group>"; };
+		36F326662F586EF8004B8ED6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +68,13 @@
 			children = (
 				120E289627DAFAF4000129B5 /* AppDelegate.swift */,
 				120E289827DAFAF4000129B5 /* SceneDelegate.swift */,
-				120E289A27DAFAF4000129B5 /* ViewControllerOne.swift */,
-				120E28AA27DAFE95000129B5 /* ViewControllerTwo.swift */,
-				121E32862817B5A200DC59D4 /* ViewControllerThree.swift */,
+				120E289A27DAFAF4000129B5 /* TimerViewController.swift */,
+				120E28AA27DAFE95000129B5 /* ManualViewController.swift */,
+				121E32862817B5A200DC59D4 /* HistoryViewController.swift */,
 				120E289C27DAFAF4000129B5 /* Main.storyboard */,
+				36F326662F586EF8004B8ED6 /* LoginViewController.swift */,
+				36F326622F586E79004B8ED6 /* VisualViewController.swift */,
+				36F326602F586D91004B8ED6 /* SummaryViewController.swift */,
 				120E289F27DAFAF6000129B5 /* Assets.xcassets */,
 				120E28A127DAFAF6000129B5 /* LaunchScreen.storyboard */,
 				120E28A427DAFAF6000129B5 /* Info.plist */,
@@ -144,9 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120E28AB27DAFE95000129B5 /* ViewControllerTwo.swift in Sources */,
-				120E289B27DAFAF4000129B5 /* ViewControllerOne.swift in Sources */,
-				121E32872817B5A200DC59D4 /* ViewControllerThree.swift in Sources */,
+				120E28AB27DAFE95000129B5 /* ManualViewController.swift in Sources */,
+				36F326612F586D91004B8ED6 /* SummaryViewController.swift in Sources */,
+				120E289B27DAFAF4000129B5 /* TimerViewController.swift in Sources */,
+				36F326632F586E79004B8ED6 /* VisualViewController.swift in Sources */,
+				36F326672F586EF8004B8ED6 /* LoginViewController.swift in Sources */,
+				121E32872817B5A200DC59D4 /* HistoryViewController.swift in Sources */,
 				120E289727DAFAF4000129B5 /* AppDelegate.swift in Sources */,
 				120E289927DAFAF4000129B5 /* SceneDelegate.swift in Sources */,
 			);
