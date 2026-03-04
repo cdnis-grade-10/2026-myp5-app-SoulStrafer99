@@ -18,6 +18,7 @@
 		36F326612F586D91004B8ED6 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326602F586D91004B8ED6 /* SummaryViewController.swift */; };
 		36F326632F586E79004B8ED6 /* VisualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326622F586E79004B8ED6 /* VisualViewController.swift */; };
 		36F326672F586EF8004B8ED6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326662F586EF8004B8ED6 /* LoginViewController.swift */; };
+		36F326692F58761E004B8ED6 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F326682F58761E004B8ED6 /* data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		36F326602F586D91004B8ED6 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		36F326622F586E79004B8ED6 /* VisualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualViewController.swift; sourceTree = "<group>"; };
 		36F326662F586EF8004B8ED6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		36F326682F58761E004B8ED6 /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				120E28AA27DAFE95000129B5 /* ManualViewController.swift */,
 				121E32862817B5A200DC59D4 /* HistoryViewController.swift */,
 				120E289C27DAFAF4000129B5 /* Main.storyboard */,
+				36F326682F58761E004B8ED6 /* data.swift */,
 				36F326662F586EF8004B8ED6 /* LoginViewController.swift */,
 				36F326622F586E79004B8ED6 /* VisualViewController.swift */,
 				36F326602F586D91004B8ED6 /* SummaryViewController.swift */,
@@ -160,6 +163,7 @@
 				36F326672F586EF8004B8ED6 /* LoginViewController.swift in Sources */,
 				121E32872817B5A200DC59D4 /* HistoryViewController.swift in Sources */,
 				120E289727DAFAF4000129B5 /* AppDelegate.swift in Sources */,
+				36F326692F58761E004B8ED6 /* data.swift in Sources */,
 				120E289927DAFAF4000129B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

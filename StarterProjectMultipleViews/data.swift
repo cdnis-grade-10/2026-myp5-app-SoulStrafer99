@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct task: Codable {
+    let taskName: String
+    let earnings: Double
+    let timeSpent: String
+    let date: Date
+}
+

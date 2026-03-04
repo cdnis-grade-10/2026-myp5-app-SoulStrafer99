@@ -32,7 +32,6 @@ class ViewControllerOne: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var timerLabel: UILabel!
     
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var tTaskNameTextField: UITextField!
     @IBOutlet weak var tEarningsTextField: UITextField!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -86,9 +85,9 @@ class ViewControllerOne: UIViewController {
         }
         else {
             timerCounting = true
-            startStopButton.setTitle("STOP", for: .normal)
-            startStopButton.setTitleColor(UIColor.red, for: .normal)
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+                startStopButton.setTitle("STOP", for: .normal)
+                startStopButton.setTitleColor(UIColor.red, for: .normal)
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
             
         }
     }
@@ -108,7 +107,7 @@ class ViewControllerOne: UIViewController {
     }
     
     func secondsToHoursMinutesSeconds (seconds: Int) -> (Int, Int, Int) {
-        return ((seconds / 3600, ((seconds % 3600) / 60), ((seconds % 3600) % 60)))
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
     func makeTimeString(hours: Int, minutes: Int, seconds: Int) -> String{
@@ -120,6 +119,30 @@ class ViewControllerOne: UIViewController {
         timeString += String(format: "%02d", seconds)
         return timeString
         
+    }
+    @IBAction func saveButton(_ sender: Any) {
+            let name = tTaskNameTextField.text ?? "Unnamed Task"
+            let earnings = Double(tEarningsTextField.text ?? "0") ?? 0.0
+            let duration = timerLabel.text ?? "00 : 00 : 00"
+            let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
+            saveToPersistence(newEntry: newEntry)
+            let successAlert = UIAlertController(title: "Saved!", message: "Work recorded.", preferredStyle: .alert)
+            successAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(successAlert, animated: true)
+    }
+    
+    func saveToPersistence(newEntry: task) {
+        let defaults = UserDefaults.standard
+        var savedEntries = [task]()
+        if let data = defaults.data(forKey: "SavedHistory") {
+            if let decoded = try? JSONDecoder().decode([task].self, from: data) {
+                savedEntries = decoded
+            }
+        }
+        savedEntries.append(newEntry)
+        if let encoded = try? JSONEncoder().encode(savedEntries) {
+            defaults.set(encoded, forKey: "SavedHistory")
+        }
     }
 }
 
