@@ -126,9 +126,12 @@ class ViewControllerOne: UIViewController {
             let duration = timerLabel.text ?? "00 : 00 : 00"
             let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
             saveToPersistence(newEntry: newEntry)
-            let successAlert = UIAlertController(title: "Saved!", message: "Work recorded.", preferredStyle: .alert)
+            let successAlert = UIAlertController(title: "Saved!", message: "Task recorded.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(successAlert, animated: true)
+        tTaskNameTextField.text = ""
+        tEarningsTextField.text = ""
+        timerLabel.text = "00 : 00 : 00"
     }
     
     func saveToPersistence(newEntry: task) {
