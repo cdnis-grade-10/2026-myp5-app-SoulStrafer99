@@ -48,8 +48,10 @@ class ViewControllerTwo: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // This tells the view to stop editing, which hides the keyboard
+        /*touches began means the user touches the screen, the (_ touches...) thing after that is required to put in in Xcode */
         self.view.endEditing(true)
+        /* self means the main keyboard, end editing true forces the keyboard to close, so everytime the user clicks other place except the keyboard, the keyboard collapses*/
+        
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -69,12 +71,14 @@ class ViewControllerTwo: UIViewController {
         confirmAlert.addAction(noAction)
         
         self.present(confirmAlert, animated: true, completion: nil)
+        //same thing as Timer View Controller
     }
     
     func finalSave() {
             let name = mTaskNameTextField.text ?? "Unnamed Task"
             let earnings = Double(mEarningsTextField.text ?? "0") ?? 0.0
             let totalSeconds = Int(timePicker.countDownDuration)
+        //same thing as Timer View Controller, but getting the seconds from the timerpicker duration
             let hours = totalSeconds / 3600
             let minutes = (totalSeconds % 3600) / 60
             let seconds = totalSeconds % 60
@@ -107,6 +111,8 @@ class ViewControllerTwo: UIViewController {
             defaults.set(encoded, forKey: "SavedHistory")
         }
     }
+    
+    //same thing as Timer View Controller
     
    
 }

@@ -13,4 +13,4 @@ struct task: Codable {
     let timeSpent: String
     let date: Date
 }
-
+// four key elements for arrays and other parts of the app control
