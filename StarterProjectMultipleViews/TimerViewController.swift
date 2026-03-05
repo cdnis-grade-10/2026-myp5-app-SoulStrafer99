@@ -121,17 +121,45 @@ class ViewControllerOne: UIViewController {
         
     }
     @IBAction func saveButton(_ sender: Any) {
-            let name = tTaskNameTextField.text ?? "Unnamed Task"
-            let earnings = Double(tEarningsTextField.text ?? "0") ?? 0.0
-            let duration = timerLabel.text ?? "00 : 00 : 00"
-            let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
-            saveToPersistence(newEntry: newEntry)
-            let successAlert = UIAlertController(title: "Saved!", message: "Task recorded.", preferredStyle: .alert)
+            let confirmAlert = UIAlertController(
+                title: "Confirm Details",
+                message: "Is the task name, earnings, and time spent all correct?",
+                preferredStyle: .alert
+            )
+            
+            let yesAction = UIAlertAction(title: "Yes, Save it", style: .default) { (_) in
+                self.finalSave()
+            }
+            
+            let noAction = UIAlertAction(title: "No, Go back", style: .cancel, handler: nil)
+            
+            confirmAlert.addAction(yesAction)
+            confirmAlert.addAction(noAction)
+            
+            self.present(confirmAlert, animated: true, completion: nil)
+    }
+    
+    func finalSave() {
+        let name = tTaskNameTextField.text ?? "Unnamed Task"
+        let earnings = Double(tEarningsTextField.text ?? "0") ?? 0.0
+        let duration = timerLabel.text ?? "00 : 00 : 00"
+        
+        let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
+        
+        saveToPersistence(newEntry: newEntry)
+        let successAlert = UIAlertController(title: "Saved!", message: "Task recorded.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(successAlert, animated: true)
-        tTaskNameTextField.text = ""
         tEarningsTextField.text = ""
+        tTaskNameTextField.text = ""
+        count = 0
+        timer.invalidate()
+        timerCounting = false
         timerLabel.text = "00 : 00 : 00"
+        currentTimeLabel.text = "Current Timer: N/A"
+        startStopButton.setTitle("START", for: .normal)
+        startStopButton.setTitleColor(UIColor.green, for: .normal)
+        
     }
     
     func saveToPersistence(newEntry: task) {
