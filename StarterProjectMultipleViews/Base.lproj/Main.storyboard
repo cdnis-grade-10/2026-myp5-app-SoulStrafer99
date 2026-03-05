@@ -448,9 +448,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6T-sk-twk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.58778625954199" y="747.88732394366195"/>
+            <point key="canvasLocation" x="956" y="751"/>
         </scene>
-        <!--Visuals-->
+        <!--Calendar-->
         <scene sceneID="nH2-XU-Epy">
             <objects>
                 <viewController id="ZCZ-b8-ir1" customClass="VisualViewController" customModule="StarterProjectMultipleViews" customModuleProvider="target" sceneMemberID="viewController">
@@ -459,44 +459,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Jn-sn-uA9">
-                                <rect key="frame" x="20" y="178" width="353" height="80"/>
+                                <rect key="frame" x="20" y="168" width="353" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="M3T-cH-hNo">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="49.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="119.66666666666667"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdv-8d-N7S">
-                                                <rect key="frame" x="0.0" y="0.0" width="46" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-9y-Er3">
-                                                <rect key="frame" x="51" y="0.0" width="46.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="51" y="0.0" width="46.333333333333343" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBZ-7V-dmW">
-                                                <rect key="frame" x="102.33333333333333" y="0.0" width="45.999999999999986" height="49.666666666666664"/>
+                                                <rect key="frame" x="102.33333333333333" y="0.0" width="45.999999999999986" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xt-NT-IoY">
-                                                <rect key="frame" x="153.33333333333334" y="0.0" width="46.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="153.33333333333334" y="0.0" width="46.333333333333343" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                             </view>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4c-cS-wKh">
-                                                <rect key="frame" x="204.66666666666666" y="0.0" width="46" height="49.666666666666664"/>
+                                                <rect key="frame" x="204.66666666666666" y="0.0" width="46" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                             </view>
                                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-tt-jwy">
-                                                <rect key="frame" x="255.66666666666671" y="0.0" width="46.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="255.66666666666671" y="0.0" width="46.333333333333343" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                             </view>
                                             <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHg-Q6-a1o">
-                                                <rect key="frame" x="307" y="0.0" width="46" height="49.666666666666664"/>
+                                                <rect key="frame" x="307" y="0.0" width="46" height="119.66666666666667"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="v77-XA-yqu">
-                                        <rect key="frame" x="0.0" y="59.666666666666664" width="353" height="20.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="129.66666666666669" width="353" height="20.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vE-QI-uOR">
                                                 <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="20.333333333333332"/>
@@ -544,43 +544,41 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="2WV-eT-7yP"/>
+                                    <constraint firstAttribute="height" constant="150" id="Nr0-a0-z16"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Days Worked:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPV-Uk-PU7">
-                                <rect key="frame" x="20" y="99" width="255" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days Worked" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88x-As-JKK">
+                                <rect key="frame" x="20" y="326" width="353" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Goal Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-lC-iSI">
-                                <rect key="frame" x="18" y="296" width="259" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change Your Goal Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-VP-uzM">
-                                <rect key="frame" x="16" y="358" width="316" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
-                                <color key="tintColor" systemColor="systemGray5Color"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9i-i8-fYy">
+                                <rect key="frame" x="10" y="394" width="373" height="400"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Y1N-td-rYt"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PTM-xO-BCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7Jn-sn-uA9" firstAttribute="leading" secondItem="PTM-xO-BCu" secondAttribute="leading" constant="20" id="IIe-01-zQN"/>
-                            <constraint firstItem="7Jn-sn-uA9" firstAttribute="top" secondItem="PTM-xO-BCu" secondAttribute="top" constant="60" id="gk8-c7-MCt"/>
-                            <constraint firstAttribute="trailing" secondItem="7Jn-sn-uA9" secondAttribute="trailing" constant="20" id="p9K-az-611"/>
+                            <constraint firstItem="88x-As-JKK" firstAttribute="leading" secondItem="PTM-xO-BCu" secondAttribute="leading" constant="20" id="1W7-lm-xAW"/>
+                            <constraint firstItem="f9i-i8-fYy" firstAttribute="leading" secondItem="PTM-xO-BCu" secondAttribute="leading" constant="10" id="8Rl-73-EWk"/>
+                            <constraint firstItem="88x-As-JKK" firstAttribute="top" secondItem="PTM-xO-BCu" secondAttribute="top" constant="208" id="HOK-ki-z0r"/>
+                            <constraint firstAttribute="trailing" secondItem="7Jn-sn-uA9" secondAttribute="trailing" constant="20" id="W1b-nV-fZE"/>
+                            <constraint firstItem="7Jn-sn-uA9" firstAttribute="leading" secondItem="PTM-xO-BCu" secondAttribute="leading" constant="20" id="X2J-yk-Cg7"/>
+                            <constraint firstItem="88x-As-JKK" firstAttribute="centerX" secondItem="YTA-sJ-Cn2" secondAttribute="centerX" id="ZgZ-Cb-yCx"/>
+                            <constraint firstItem="PTM-xO-BCu" firstAttribute="trailing" secondItem="88x-As-JKK" secondAttribute="trailing" constant="20" id="be8-Zw-rmi"/>
+                            <constraint firstItem="PTM-xO-BCu" firstAttribute="trailing" secondItem="f9i-i8-fYy" secondAttribute="trailing" constant="10" id="eQp-6g-SAm"/>
+                            <constraint firstItem="7Jn-sn-uA9" firstAttribute="top" secondItem="PTM-xO-BCu" secondAttribute="top" constant="50" id="fkD-54-cQU"/>
+                            <constraint firstItem="f9i-i8-fYy" firstAttribute="top" secondItem="88x-As-JKK" secondAttribute="bottom" constant="20" id="hm8-Vh-bk8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Visuals" image="graph.2d" catalog="system" id="bjH-f3-OUb"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" id="bjH-f3-OUb"/>
                     <connections>
+                        <outlet property="calendar" destination="f9i-i8-fYy" id="E53-uB-g5V"/>
                         <outletCollection property="daySquares" destination="tBZ-7V-dmW" collectionClass="NSMutableArray" id="gUt-PA-OMx"/>
                         <outletCollection property="daySquares" destination="xdv-8d-N7S" collectionClass="NSMutableArray" id="qsM-Tc-6rr"/>
                         <outletCollection property="daySquares" destination="k4c-cS-wKh" collectionClass="NSMutableArray" id="hFi-qY-4Uz"/>
@@ -619,8 +617,8 @@
     </scenes>
     <resources>
         <image name="Image" width="1920" height="1080"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="goforward" catalog="system" width="119" height="128"/>
-        <image name="graph.2d" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="117" height="128"/>
         <image name="stopwatch" catalog="system" width="121" height="128"/>
         <image name="sum" catalog="system" width="100" height="128"/>
@@ -631,34 +629,34 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.79607843137254897" green="0.18823529411764706" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
