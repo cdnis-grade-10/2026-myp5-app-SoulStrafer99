@@ -45,14 +45,19 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func redirectWebsite(_ sender: Any) {
-        let urlString = "https://www.cdnis.edu.hk/"
+        let urlString = "https://en.wikipedia.org/wiki/Login"
         
-        // 2. Convert it to a real URL object
         if let url = URL(string: urlString) {
-            // 3. Tell the iPhone to open it in the default browser
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
         
         
+    }
+    @IBAction func feedback(_ sender: Any) {
+        let urlString = "https://en.wikipedia.org/wiki/Feedback"
+        
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
