@@ -9,6 +9,9 @@ import UIKit
 
 class ViewControllerFourViewController: UIViewController {
 
+    @IBOutlet weak var totalEarningsLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
+    @IBOutlet weak var hourlyRateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarItem = UITabBarItem(title: "Summary", image: UIImage(systemName: "sum"), tag: 0)
