@@ -84,4 +84,30 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
             }
         }
     }
+    
+    
+    @IBAction func clearAllData(_ sender: Any) {
+        let alert = UIAlertController(title: "Clear History?", message: "This will permanently delete all recorded tasks. Are you sure?", preferredStyle: .actionSheet)
+        
+        // The "Clear" action
+        let clearAction = UIAlertAction(title: "Clear All", style: .destructive) { (_) in
+            // 1. Remove from UserDefaults
+            UserDefaults.standard.removeObject(forKey: "SavedHistory")
+            
+            // 2. Clear the local array
+            self.allEntries.removeAll()
+            
+            // 3. Refresh the table
+            self.historyTable.reloadData()
+        }
+        
+        // The "Cancel" action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(clearAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true)
+    }
+    
 }
