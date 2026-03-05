@@ -332,7 +332,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpClicked:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="Yfm-KT-GNK"/>
+                                    <action selector="redirectWebsite:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="Jzk-Zo-tjd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f7-nj-Xyo">
@@ -344,7 +344,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="23"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="forgotPasswordClicked:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="hjs-wj-0Qz"/>
+                                    <action selector="redirectWebsite:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="p6P-RW-z8h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR6-Cw-i6w">
@@ -354,7 +354,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Log In"/>
                                 <connections>
-                                    <action selector="loginClicked:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="SU3-Wm-9xN"/>
+                                    <action selector="redirectWebsite:" destination="C7P-sa-Xpb" eventType="touchUpInside" id="k2R-Mc-F1W"/>
                                 </connections>
                             </button>
                         </subviews>
