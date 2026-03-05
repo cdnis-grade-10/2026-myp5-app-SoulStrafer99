@@ -31,6 +31,7 @@ class ViewControllerTwo: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var mTaskNameTextField: UITextField!
     @IBOutlet weak var mEarningsTextField: UITextField!
@@ -50,4 +51,62 @@ class ViewControllerTwo: UIViewController {
         // This tells the view to stop editing, which hides the keyboard
         self.view.endEditing(true)
     }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        let confirmAlert = UIAlertController(
+            title: "Confirm Details",
+            message: "Is the task name, earnings, and time spent all correct?",
+            preferredStyle: .alert
+        )
+        
+        let yesAction = UIAlertAction(title: "Yes, Save it", style: .default) { (_) in
+            self.finalSave()
+        }
+        
+        let noAction = UIAlertAction(title: "No, Go back", style: .cancel, handler: nil)
+        
+        confirmAlert.addAction(yesAction)
+        confirmAlert.addAction(noAction)
+        
+        self.present(confirmAlert, animated: true, completion: nil)
+    }
+    
+    func finalSave() {
+            let name = mTaskNameTextField.text ?? "Unnamed Task"
+            let earnings = Double(mEarningsTextField.text ?? "0") ?? 0.0
+            let totalSeconds = Int(timePicker.countDownDuration)
+            let hours = totalSeconds / 3600
+            let minutes = (totalSeconds % 3600) / 60
+            let seconds = totalSeconds % 60
+            
+            let duration = String(format: "%02d : %02d : %02d", hours, minutes, seconds)
+            
+            let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
+            saveToPersistence(newEntry: newEntry)
+            
+            let successAlert = UIAlertController(title: "Saved!", message: "Manual task recorded.", preferredStyle: .alert)
+            successAlert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(successAlert, animated: true)
+    
+            mEarningsTextField.text = ""
+            mTaskNameTextField.text = ""
+            timePicker.countDownDuration = 0
+        
+    }
+    
+    func saveToPersistence(newEntry: task) {
+        let defaults = UserDefaults.standard
+        var savedEntries = [task]()
+        if let data = defaults.data(forKey: "SavedHistory") {
+            if let decoded = try? JSONDecoder().decode([task].self, from: data) {
+                savedEntries = decoded
+            }
+        }
+        savedEntries.append(newEntry)
+        if let encoded = try? JSONEncoder().encode(savedEntries) {
+            defaults.set(encoded, forKey: "SavedHistory")
+        }
+    }
+    
+   
 }

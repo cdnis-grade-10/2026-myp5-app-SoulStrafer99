@@ -205,6 +205,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Dhs-9s-nZ9" eventType="touchUpInside" id="2xd-9n-F2t"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gA4-P0-ACM"/>
@@ -215,6 +218,7 @@
                         <outlet property="mEarningsTextField" destination="bfn-qE-A2A" id="FPn-HP-oZs"/>
                         <outlet property="mTaskNameTextField" destination="zIx-aI-en7" id="FYu-Uw-sxK"/>
                         <outlet property="saveButton" destination="ugl-eO-saC" id="6xB-Ex-JDj"/>
+                        <outlet property="timePicker" destination="qNh-vN-yDH" id="7JZ-fA-Od4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys9-cQ-av3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
