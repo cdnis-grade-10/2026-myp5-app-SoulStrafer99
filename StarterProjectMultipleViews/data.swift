@@ -13,4 +13,5 @@ struct task: Codable {
     let timeSpent: String
     let date: Date
 }
-// four key elements for arrays and other parts of the app control
+//four key elements for arrays and other parts of the app control
+//codable allows to switch data models' format to other formats like JSON
