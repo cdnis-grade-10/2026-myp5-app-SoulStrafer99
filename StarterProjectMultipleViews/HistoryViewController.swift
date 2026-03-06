@@ -88,9 +88,9 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
         let defaults = UserDefaults.standard
         // UserDefaults is a built in database
         // Declaring defaults as the database
-        if let data = defaults.data(forKey: "SavedHistory"){
+        if let data = defaults.data(forKey: "SavedTasks"){
             // if let prevents crashes for the app to skip this step if it doesn't work
-            //finds the "folder" SavedHistory in the UserDefaults database
+            //finds the "folder" SavedTasks in the UserDefaults database
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([task].self, from: data){
                 //try is does similar thing as if let
@@ -112,8 +112,8 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
         //prepare alert to clear data
         let clearAction = UIAlertAction(title: "Clear All", style: .destructive) { (_) in
             //destructive means the option is red
-            UserDefaults.standard.removeObject(forKey: "SavedHistory")
-            //remove everything in the SavedHistoryFolder
+            UserDefaults.standard.removeObject(forKey: "SavedTasks")
+            //remove everything in the SavedTasksFolder
             self.allEntries.removeAll()
             //remove everything in the array
             self.historyTable.reloadData()

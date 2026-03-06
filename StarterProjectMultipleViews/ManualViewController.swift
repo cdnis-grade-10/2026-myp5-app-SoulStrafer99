@@ -101,14 +101,14 @@ class ViewControllerTwo: UIViewController {
     func saveToPersistence(newEntry: task) {
         let defaults = UserDefaults.standard
         var savedEntries = [task]()
-        if let data = defaults.data(forKey: "SavedHistory") {
+        if let data = defaults.data(forKey: "SavedTasks") {
             if let decoded = try? JSONDecoder().decode([task].self, from: data) {
                 savedEntries = decoded
             }
         }
         savedEntries.append(newEntry)
         if let encoded = try? JSONEncoder().encode(savedEntries) {
-            defaults.set(encoded, forKey: "SavedHistory")
+            defaults.set(encoded, forKey: "SavedTasks")
         }
     }
     

@@ -214,15 +214,16 @@ class ViewControllerOne: UIViewController {
         var savedEntries = [task]()
         //array is in terms of the struct so has four key elements
         //create a list to organize the tasks
-        if let data = defaults.data(forKey: "SavedHistory") {
+        if let data = defaults.data(forKey: "SavedTasks") {
             // if let prevents crashes for the app to skip this step if it doesn't work
-            //finds the "folder" SavedHistory in the UserDefaults database
+            //finds the "folder" SavedTasks in the UserDefaults database
+            //either creates new folder called SavedTasks or goes to the existing SavedTasks folder
             if let decodedTasks = try? JSONDecoder().decode([task].self, from: data) {
                 //try is does similar thing as if let
                 //from data is the constant just declared, basically getting this piece of data and putting it into JSONDecoder
                 //JSON is a type of data to save in UserDefaults, decoder just turns it back to readable array of "task"
                 savedEntries = decodedTasks
-                //fills the savedEntries array with old tasks called up in the UserDefaults SavedHistoryFolder
+                //fills the savedEntries array with old tasks called up in the UserDefaults SavedTasksFolder
             }
         }
         savedEntries.append(newEntry)
@@ -230,8 +231,8 @@ class ViewControllerOne: UIViewController {
         if let encoded = try? JSONEncoder().encode(savedEntries) {
             //putting the whole savedEntry array back into JSON format of data
             //encoded is the name of the JSON format data
-            defaults.set(encoded, forKey: "SavedHistory")
-            //updating the SavedHistory folder in UserDefaults
+            defaults.set(encoded, forKey: "SavedTasks")
+            //updating the SavedTasks folder in UserDefaults
         }
     }
 }

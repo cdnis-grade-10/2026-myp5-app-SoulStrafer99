@@ -32,7 +32,7 @@ class ViewControllerFourViewController: UIViewController {
         let defaults = UserDefaults.standard
         // UserDefaults is a built in database
         // Declaring defaults as the database
-        if let data = defaults.data(forKey: "SavedHistory") {
+        if let data = defaults.data(forKey: "SavedTasks") {
             // if let prevents crashes for the app to skip this step if it doesn't work
             //finds the "folder" SavedHistory in the UserDefaults database
             if let decodedTasks = try? JSONDecoder().decode([task].self, from: data) {

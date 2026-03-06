@@ -25,7 +25,7 @@ class VisualViewController: UIViewController {
         
         func loadData() {
             let defaults = UserDefaults.standard
-            if let data = defaults.data(forKey: "SavedHistory"),
+            if let data = defaults.data(forKey: "SavedTasks"),
                let decoded = try? JSONDecoder().decode([task].self, from: data) {
                 allEntries = decoded
             } else {
