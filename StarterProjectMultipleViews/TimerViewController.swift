@@ -109,10 +109,12 @@ class ViewControllerOne: UIViewController {
     
     @objc func timerCounter() -> Void {
         //object C function required by XCode
+        //void just means that no value is returned
         count = count + 1
         //adding a second
         let time = secondsToHoursMinutesSeconds(seconds: count)
         //turn seconds into the hours minutes seconds format for other purposes in the app
+        //count is used for "second" in the secondsToHoursMinutesSeconds function
         let timeString = makeTimeString(hours: time.0, minutes: time.1, seconds: time.2)
         // making a tuple (lightweight version of a struct) in three items: hours, minutes and seconds; calls the function to process and return those values
         timerLabel.text = timeString
@@ -178,7 +180,7 @@ class ViewControllerOne: UIViewController {
     }
     
     func finalSave() {
-        let name = tTaskNameTextField.text ?? "Unnamed Task"
+        let name = tTaskNameTextField.text ?? "Untitled Task"
         //?? is to make a default value if the user doesn't input anything, so in this case, if the user input is blank, it becomes unnamed task
         let earnings = Double(tEarningsTextField.text ?? "0") ?? 0.0
         //again, if the tEarnings Text Field doesn't have anything, it turns to 0. Then it turns tEarningsTextField text (or 0) into a double, then in case the user typed something that cannot be converted like "im trolling", it becomes 0.0

@@ -47,7 +47,7 @@ class ViewControllerFourViewController: UIViewController {
             }
             
             
-            let totalEarnings = allEntries.reduce(0) { $0 + $1.earnings }
+            let totalEarnings = allEntries.reduce(0.0) { $0 + $1.earnings }
             //reduce is used to sum up the earning values in the array
             //(0) means initial value of the sum, $0 is the total so far, and $1 is the current task the loop is looping at, so it will repeat for the whole array to get the sum
             totalEarningsLabel.text = String(format: "$%.2f", totalEarnings)

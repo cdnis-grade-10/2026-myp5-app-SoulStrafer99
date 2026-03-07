@@ -68,7 +68,7 @@ class VisualViewController: UIViewController {
                 //looping the squares in the heatmap one by one
                 let day = square.tag
                 //for each square view (7 in total), there is a tag from 1 (sun) to 7 (sat), this corresponds to the weekday
-                let dayEarnings = earningsByDay[day] ?? 0
+                let dayEarnings = earningsByDay[day] ?? 0.0
                 //look into the dictionary to find the earnings of the specific day, if nothing then use 0 to prevent crashing
                 let colorDepth = CGFloat(Double(dayEarnings) / Double(divisor))
                 //CGFloat is the value for color
