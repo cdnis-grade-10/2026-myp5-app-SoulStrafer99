@@ -188,7 +188,7 @@ class ViewControllerOne: UIViewController {
         let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
         //new task created as a new data point, being "packaged" by task name, earnings, time spent and date
         
-        saveToPersistence(newEntry: newEntry)
+        saveToDatabase(newEntry: newEntry)
         // saves it to the database with the new task (didn't use new task as name to prevent confusion)
         let successAlert = UIAlertController(title: "Saved!", message: "Task recorded.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -207,7 +207,7 @@ class ViewControllerOne: UIViewController {
         
     }
     
-    func saveToPersistence(newEntry: task) {
+    func saveToDatabase(newEntry: task) {
         let defaults = UserDefaults.standard
         // UserDefaults is a built in database
         // Declaring defaults as the database

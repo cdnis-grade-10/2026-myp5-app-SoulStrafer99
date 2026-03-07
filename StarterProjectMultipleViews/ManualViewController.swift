@@ -86,7 +86,7 @@ class ViewControllerTwo: UIViewController {
             let duration = String(format: "%02d : %02d : %02d", hours, minutes, seconds)
             
             let newEntry = task(taskName: name, earnings: earnings, timeSpent: duration, date: Date())
-            saveToPersistence(newEntry: newEntry)
+            saveToDatabase(newEntry: newEntry)
             
             let successAlert = UIAlertController(title: "Saved!", message: "Manual task recorded.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -98,7 +98,7 @@ class ViewControllerTwo: UIViewController {
         
     }
     
-    func saveToPersistence(newEntry: task) {
+    func saveToDatabase(newEntry: task) {
         let defaults = UserDefaults.standard
         var savedEntries = [task]()
         if let data = defaults.data(forKey: "SavedTasks") {
