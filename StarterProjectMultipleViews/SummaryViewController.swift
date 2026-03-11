@@ -27,6 +27,12 @@ class ViewControllerFourViewController: UIViewController {
         //everytime the user switches to this tab bar, the calculate function is ran
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        calculate()
+        //everytime the user switches to this tab bar, the calculate function is ran
+    }
+    
     var allEntries: [task] = []
     //array is in terms of the struct so has four key elements
     
