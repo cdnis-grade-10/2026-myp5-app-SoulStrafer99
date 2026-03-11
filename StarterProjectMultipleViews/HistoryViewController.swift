@@ -35,13 +35,16 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //index path means row number
+        //must give a UItableviewCell at the end
+        //tableView is the table view refered to
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         //dequeueReusableCell reuses the cell when scrolling down, but putting new data into it
         //lets say theres 5000 entries of task, but the phone can only allow 10 in the view, so once the user scrolls down, the "empty" cell will be reused but new data will be put there so the user can see
         //cell is the identifier of the prototype cell in the table view
         let entry = allEntries[indexPath.row]
         // use current row to grab the value from all entries (e.g. its on the third row then its the third value in the array)
-        
+        cell.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1 to match the background color
         // Main Task Title
         cell.textLabel?.text = entry.taskName
         //main title of the cell is taskName
@@ -62,6 +65,7 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var historyTable: UITableView!
     
     
+    
     // MARK: - Variables and Constants
     var allEntries: [task] = []
     //array is in terms of the struct so has four key elements
@@ -76,6 +80,10 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
         historyTable.dataSource = self
         historyTable.delegate = self
         //history table getting its datasource and delegate (how it behaves) from this view controller
+        self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
+        self.historyTable.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
     }
     
     override func viewWillAppear(_ animated: Bool) {

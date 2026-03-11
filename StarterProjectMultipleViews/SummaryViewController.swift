@@ -17,6 +17,8 @@ class ViewControllerFourViewController: UIViewController {
         self.tabBarItem = UITabBarItem(title: "Summary", image: UIImage(systemName: "sum"), tag: 0)
         /* setting up the tab bar on the bottom of the screen, title as summary and using the image sum from Xcode, tag is like a number to determine which screen the user looks at (0 means first screen); self just means this current screen */
         calculate()
+        self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
     }
     
     override func viewWillAppear(_ animated: Bool) {

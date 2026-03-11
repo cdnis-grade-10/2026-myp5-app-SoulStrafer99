@@ -58,6 +58,8 @@ class ViewControllerOne: UIViewController {
         //initilizing the startStopButton title color
         self.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(systemName: "stopwatch"), tag: 0)
         /* setting up the tab bar on the bottom of the screen, title as timer and using the image stopwatch from Xcode, tag is like a number to determine which screen the user looks at (0 means first screen); self just means this current screen */
+        self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
         
     }
     

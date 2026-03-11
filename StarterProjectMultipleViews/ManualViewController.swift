@@ -46,6 +46,8 @@ class ViewControllerTwo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /*touches began means the user touches the screen, the (_ touches...) thing after that is required to put in in Xcode */

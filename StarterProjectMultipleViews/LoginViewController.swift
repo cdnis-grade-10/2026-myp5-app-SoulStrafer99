@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
+        //color #c7f0f1
         emailTextField.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         //update the emailTextField font
         
