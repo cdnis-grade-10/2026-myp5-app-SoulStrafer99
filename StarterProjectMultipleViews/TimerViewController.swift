@@ -54,12 +54,17 @@ class ViewControllerOne: UIViewController {
     override func viewDidLoad() {
         // initial setup
         super.viewDidLoad()
-        startStopButton.setTitleColor(UIColor.green, for: .normal)
+        startStopButton.setTitleColor(UIColor.blue, for: .normal)
         //initilizing the startStopButton title color
         self.tabBarItem = UITabBarItem(title: "Timer", image: UIImage(systemName: "stopwatch"), tag: 0)
         /* setting up the tab bar on the bottom of the screen, title as timer and using the image stopwatch from Xcode, tag is like a number to determine which screen the user looks at (0 means first screen); self just means this current screen */
         self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
         //color #c7f0f1
+        startStopButton.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.1)
+        resetButton.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.1)
+        startStopButton.layer.cornerRadius = startStopButton.frame.width / 2
+        resetButton.layer.cornerRadius = resetButton.frame.width / 2
+        //rounded buttons
         
     }
     
@@ -95,7 +100,7 @@ class ViewControllerOne: UIViewController {
             timer.invalidate()
             //stop timer
             startStopButton.setTitle("START", for: .normal)
-            startStopButton.setTitleColor(UIColor.green, for: .normal)
+            startStopButton.setTitleColor(UIColor.blue, for: .normal)
             //changes button to start
         }
         else {
