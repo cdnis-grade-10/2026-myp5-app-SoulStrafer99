@@ -62,6 +62,7 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - IBOutlets
     
+    @IBOutlet var nothingImageView: UIImageView!
     @IBOutlet weak var historyTable: UITableView!
     
     
@@ -84,12 +85,14 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
         //color #c7f0f1
         self.historyTable.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
         //color #c7f0f1
+        updateEmptyView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadHistory()
         //everytime this view gets in focus, it updates the history table
+        updateEmptyView()
     }
     
     func loadHistory() {
@@ -126,6 +129,7 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
             //remove everything in the array
             self.historyTable.reloadData()
             //reload historyTable
+            self.updateEmptyView()
         }
         
         // The "Cancel" action
@@ -138,4 +142,11 @@ class ViewControllerThree: UIViewController, UITableViewDataSource, UITableViewD
         //present the alert
     }
     
+    func updateEmptyView() {
+        if allEntries.isEmpty {
+            nothingImageView.image = UIImage(named: "NothingInHistoryViewController")
+        } else {
+            nothingImageView.image = nil
+        }
+    }
 }
