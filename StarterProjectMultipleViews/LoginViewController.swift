@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarItem = UITabBarItem(title: "Login", image: UIImage(systemName: "link"), tag: 0)
+        /* setting up the tab bar on the bottom of the screen, title as history and using the image goforward from Xcode, tag is like a number to determine which screen the user looks at (0 means first screen); self just means this current screen */
         self.view.backgroundColor = UIColor.init(red: 0.780392, green: 0.941176, blue: 0.945098, alpha: 1.0)
         //color #c7f0f1
         emailTextField.font = UIFont.systemFont(ofSize: 20, weight: .regular)

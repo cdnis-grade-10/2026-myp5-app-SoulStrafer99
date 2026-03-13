@@ -86,7 +86,7 @@ class ViewControllerOne: UIViewController {
             self.timer.invalidate()
             self.timerLabel.text = self.makeTimeString(hours: 0, minutes: 0, seconds: 0)
             self.startStopButton.setTitle("START", for: .normal)
-            self.startStopButton.setTitleColor(UIColor.green, for: .normal)
+            self.startStopButton.setTitleColor(UIColor.blue, for: .normal)
             self.currentTimeLabel.text = "Current Timer: N/A"
         }))
         // yes condition, reset everything (using self to let it access this view controller's variables which are out of scope for the this part of the function)
@@ -211,7 +211,7 @@ class ViewControllerOne: UIViewController {
         timerLabel.text = "00 : 00 : 00"
         currentTimeLabel.text = "Current Timer: N/A"
         startStopButton.setTitle("START", for: .normal)
-        startStopButton.setTitleColor(UIColor.green, for: .normal)
+        startStopButton.setTitleColor(UIColor.blue, for: .normal)
         // reset everything for next task input
         
     }
